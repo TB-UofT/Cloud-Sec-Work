@@ -5,8 +5,8 @@ Cloud Security Deployment
 
 The files in this repository were used to configure the network depicted below.
 
-![TODO: Update the path with the name of your diagram](Images/Network-Drawing.png)
-![Network-Drawing](https://github.com/TB-UofT/Cloud-Sec-Work/blob/38ea4ecc6b594419c9d8ade2d54305d240fb5857/Images/Network-Drawing.png)
+![](Images/Network-Drawing.png)
+[Network-Drawing](https://github.com/TB-UofT/Cloud-Sec-Work/blob/38ea4ecc6b594419c9d8ade2d54305d240fb5857/Images/Network-Drawing.png)
 
 
 
