@@ -40,13 +40,13 @@ Integrating an ELK server allows users to easily monitor the vulnerable VMs for 
 The configuration details of each machine may be found below.
 <!-- _Note: Use the [Markdown Table Generator](http://www.tablesgenerator.com/markdown_tables) to add/remove values from the table_. -->
 
-| Name    | Function   | IP Address | Operating System |
-|---------|------------|------------|:----------------:|
-| JumpBox | Gateway    | 10.0.0.5   |       Linux      |
-| web1    | DVWA       | 10.0.0.4   |       Linux      |
-| web2    | DVWA       | 10.0.0.6   |       Linux      |
-| web3    | DVWA       | 10.0.0.7   |       Linux      |
-| ELK1    | ELK/Kibana | 10.0.0.7   |       Linux      |
+| Name    |  Function  | IP Address | Operating System |
+|---------|:----------:|------------|:----------------:|
+| JumpBox |   Gateway  | 10.0.0.5   |       Linux      |
+|   web1  |    DVWA    | 10.0.0.4   |       Linux      |
+|   web2  |    DVWA    | 10.0.0.6   |       Linux      |
+|   web3  |    DVWA    | 10.0.0.7   |       Linux      |
+|   ELK1  | ELK/Kibana | 10.0.0.7   |       Linux      |
 ### Access Policies
 
 The machines on the internal network are not exposed to the public Internet. 
@@ -94,19 +94,20 @@ We have installed the following Beats on these machines:
 - Metricbeat
 
 These Beats allow us to collect the following information from each machine:
-- _TODO: In 1-2 sentences, explain what kind of data each beat collects, and provide 1 example of what you expect to see. E.g., `Winlogbeat` collects Windows logs, which we use to track user logon events, etc._
+- Filebeat: log events
+- Metricbeat: metrics and system stats
 
 ### Using the Playbook
 In order to use the playbook, you will need to have an Ansible control node already configured. Assuming you have such a control node provisioned: 
 
 SSH into the control node and follow the steps below:
-- Copy the _____ file to _____.
-- Update the _____ file to include...
-- Run the playbook, and navigate to ____ to check that the installation worked as expected.
+- Copy the filebeat-deploy-playbook.yml and metricbeat-deploy-playbook.yml files to /etc/ansible/roles.
+- Update /etc/ansible/hosts to include the ip address of the machine under webservers
+- Run the playbook, and navigate to <IP.Address.OfYour.server:5601> to check that the installation worked as expected.
 
-_TODO: Answer the following questions to fill in the blanks:_
-- _Which file is the playbook? Where do you copy it?_
-- _Which file do you update to make Ansible run the playbook on a specific machine? How do I specify which machine to install the ELK server on versus which to install Filebeat on?_
-- _Which URL do you navigate to in order to check that the ELK server is running?
+<!-- _TODO: Answer the following questions to fill in the blanks:_ -->
+- Copy file [ELK-deploy-playbook](Files/elk-deploy-playbook.yml) to your ansible directory.  Run it with 'ansible-playbook elk-deploy-playbook.yml'
+- The Hosts file located in /etc/ansible.  Editing this file will determine which machines are included in deployments <!-- _Which file do you update to make Ansible run the playbook on a specific machine? How do I specify which machine to install the ELK server on versus which to install Filebeat on?_ -->
+- To check the ELK server is running, go to https://<IP.OF.YOUR.SERVER>:5601/app/kibana <!--_Which URL do you navigate to in order to check that the ELK server is running? -->
 
 _As a **Bonus**, provide the specific commands the user will need to run to download the playbook, update the files, etc._
