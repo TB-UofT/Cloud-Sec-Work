@@ -12,10 +12,10 @@ The files in this repository were used to configure the network depicted below.
 
 These files have been tested and used to generate a live ELK deployment on Azure. They can be used to either recreate the entire deployment pictured above. Alternatively, select portions of the _____ file may be used to install only certain pieces of it, such as Filebeat.
 
-  - (Files/DVWA-deploy-playbook.yml)
-  - (Files/ELK-deploy-playbook.yml)
-  - (Files/filebeat-deploy-playbook.yml)
-  - (Files/metricbeat-deploy-playbook.yml)
+  - [DVWA](Files/DVWA-deploy-playbook.yml)
+  - [ELK](Files/ELK-deploy-playbook.yml)
+  - [Filebeat](Files/filebeat-deploy-playbook.yml)
+  - [Metricbeat](https://github.com/TB-UofT/Cloud-Sec-Work/blob/496f5607430b7714d72be19debfeb9e10361020a/Files/metricbeat-deploy-playbook.yml)
 
 This document contains the following details:
 - Description of the Topology
