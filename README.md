@@ -72,7 +72,7 @@ Ansible was used to automate configuration of the ELK machine. No configuration 
 - Once a playbook has been written, it can be edited and deployed easily many times over, which saves valuable administrative time and effort.
 
 The playbook implements the following tasks:
-- <!-- _TODO: In 3-5 bullets, explain the steps of the ELK installation play. E.g., install Docker; download image; etc._ -->
+<!-- _TODO: In 3-5 bullets, explain the steps of the ELK installation play. E.g., install Docker; download image; etc._ -->
 - Install Docker.io
 - Install pip
 - Install docker python module
@@ -95,7 +95,7 @@ We have installed the following Beats on these machines:
 
 These Beats allow us to collect the following information from each machine:
 - Filebeat: log events
-- Metricbeat: metrics and system stats
+- Metricbeat: metrics and system statistics
 
 ### Using the Playbook
 In order to use the playbook, you will need to have an Ansible control node already configured. Assuming you have such a control node provisioned: 
