@@ -10,7 +10,7 @@ The files in this repository were used to configure the network depicted below.
 
 
 
-These files have been tested and used to generate a live ELK deployment on Azure. They can be used to either recreate the entire deployment pictured above. Alternatively, select portions of the _____ file may be used to install only certain pieces of it, such as Filebeat.
+These files have been tested and used to generate a live ELK deployment on Azure. They can be used to either recreate the entire deployment pictured above. Alternatively, select individual playbook files below may be used to install only certain pieces of it, such as Filebeat.
 
   - [DVWA](Files/DVWA-deploy-playbook.yml)
   - [ELK](Files/ELK-deploy-playbook.yml)
@@ -111,6 +111,19 @@ SSH into the control node and follow the steps below:
 - The Hosts file located in /etc/ansible.  Editing this file will determine which machines are included in deployments <!-- _Which file do you update to make Ansible run the playbook on a specific machine? How do I specify which machine to install the ELK server on versus which to install Filebeat on?_ -->
 - To check if the ELK server is running, go to https://<IP.OF.YOUR.SERVER>:5601/app/kibana <!--_Which URL do you navigate to in order to check that the ELK server is running? -->
 
-_As a **Bonus**, provide the specific commands the user will need to run to download the playbook, update the files, etc._
+<!-- _As a **Bonus**, provide the specific commands the user will need to run to download the playbook, update the files, etc._ -->
 
+### To obtain and run this playbook, clone this repository, copy the files to the appropriate locations, and edit them to suit your needs.  Prerequisite is having a machine already set up and configured with ansible.
 
+```
+apt-get update && apt-get install git
+git clone https://github.com/TB-UofT/Cloud-Sec-Work/
+```
+
+- Move to the directory you just cloned and copy the files to the appropriate location where you installed ansible.
+- Edit the configuration files for the programs you wish to use as appropriate.
+- Run the playbooks with:
+
+```
+ansible-playbook name-of-playbook.yml
+```
