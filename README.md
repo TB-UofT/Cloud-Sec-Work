@@ -113,9 +113,17 @@ SSH into the control node and follow the steps below:
 
 <!-- _As a **Bonus**, provide the specific commands the user will need to run to download the playbook, update the files, etc._ -->
 
+### To obtain and run this playbook, clone this repository, copy the files to the appropriate locations, and edit them to suit your needs.  Prerequisite is having a machine already set up and configured with ansible.
 
 ```
 apt-get update && apt-get install git
 git clone https://github.com/TB-UofT/Cloud-Sec-Work/
 ```
 
+- Move to the directory you just cloned and copy the files to the appropriate location where you installed ansible.
+- Edit the configuration files for the programs you wish to use as appropriate.
+- Run the playbooks with:
+
+```
+ansible-playbook name-of-playbook.yml
+```
