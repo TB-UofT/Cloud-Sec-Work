@@ -31,7 +31,8 @@ This document contains the following details:
 The main purpose of this network is to expose a load-balanced and monitored instance of DVWA, the D*mn Vulnerable Web Application.
 
 Load balancing ensures that the application will be highly available, in addition to restricting access to the network.
-- Load balancers restrict the incoming ports allowed as well as provide access to a backend pool of machines for high availability _TODO: What aspect of security do load balancers protect? What is the advantage of a jump box?_ The Jumpbox is secured via key based authentication and connections restricted to specific IP addresses.  This secured box allows administrative access to the rest of the internal network.
+- Load balancers restrict the incoming ports allowed as well as provide access to a backend pool of machines for high availability <!-- _TODO: What aspect of security do load balancers protect? What is the advantage of a jump box?_ --> 
+- The Jumpbox is secured via key based authentication and connections restricted to specific IP addresses.  This secured box allows administrative access to the rest of the internal network.
 
 Integrating an ELK server allows users to easily monitor the vulnerable VMs for changes to the file and system metrics.
 - Filebeat watches for the changes in the files in the locations that we specify or the log files and then collects and send the data to logstash/elasticsearch
@@ -108,6 +109,8 @@ SSH into the control node and follow the steps below:
 <!-- _TODO: Answer the following questions to fill in the blanks:_ -->
 - Copy file [ELK-deploy-playbook](Files/elk-deploy-playbook.yml) to your ansible directory.  Run it with 'ansible-playbook elk-deploy-playbook.yml'
 - The Hosts file located in /etc/ansible.  Editing this file will determine which machines are included in deployments <!-- _Which file do you update to make Ansible run the playbook on a specific machine? How do I specify which machine to install the ELK server on versus which to install Filebeat on?_ -->
-- To check the ELK server is running, go to https://<IP.OF.YOUR.SERVER>:5601/app/kibana <!--_Which URL do you navigate to in order to check that the ELK server is running? -->
+- To check if the ELK server is running, go to https://<IP.OF.YOUR.SERVER>:5601/app/kibana <!--_Which URL do you navigate to in order to check that the ELK server is running? -->
 
 _As a **Bonus**, provide the specific commands the user will need to run to download the playbook, update the files, etc._
+
+
