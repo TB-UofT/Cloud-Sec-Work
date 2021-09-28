@@ -114,8 +114,8 @@ SSH into the control node and follow the steps below:
 
 <!-- _As a **Bonus**, provide the specific commands the user will need to run to download the playbook, update the files, etc._ -->
 To clone this repository to your Docker container:
-
-- !'apt-get update && apt-get install git'
-- !'git clone https://github.com/TB-UofT/Cloud-Sec-Work/'
-
+'''
+apt-get update && apt-get install git
+git clone https://github.com/TB-UofT/Cloud-Sec-Work/
+'''
 
